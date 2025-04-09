@@ -57,14 +57,11 @@ main()//main
                 switch(choice)
                 {
                     case 1:
-                            login();
-                            break;
+                            login(); break;
                     case 2:
-                            registr();
-                            break;
+                            registr(); break;
                     case 3:
-                            forgot();
-                            break;      
+                            forgot(); break;      
                     case 4:
                             cout<<"T\n\tH\nA\n\tN\nK\n\tY\nO\n\tU \n\t\nMY FRIEND  for using this Calculator Made by '@Ashmeet Singh'(From Medicaps University)"<<endl;
                             exit(0);
@@ -87,22 +84,16 @@ void access()
 			cout<<"\nO.Exit---o\n\t";
 			cout<<"\nEnter your choice:-";
 			cin>>ch;
-			if(ch==1)
-			//condition to check the choice is one 
-			{          
+			if(ch==1) {   //condition to check the choice is one
 				BasicCalculations();
 			}
-			else if(ch==2)
-			/*If this condition is true or choice is 2 access the 2 calculation page */
-			{ 
+			else if(ch==2){  /*If this condition is true or choice is 2 access the 2 calculation page */
 			     AdvanceCalculations();
 			}
-			else if(ch==3)
-			{
+			else if(ch==3){
 				main();
 			}
-			else       
-		    {   //Error fix
+			else {   //Error fix
 		    	cout<<"Entered correct choice\n";
 		    }
 		}
@@ -113,19 +104,16 @@ void BasicCalculations()//Calculation1
 	cout<<"O---------------------------<>-----------------------------O\n";
 	cout<<"1.Addition :-"<<"\t\t\t2.Subtraction :-\n\t\n"<<"3.Division :-"<<"\t\t\t4.Multiplication :-\n\t\n"<<"5.Average :-\t"<<"\t\t6.GST at the rate of 18% :-\n\t\n"<<"7.Area :-"<<"\t\t\t8.Percentage :-\n\t\n"<<"9.Sum:-\t\t"<<"\t\t10.Main Page\n\t\n";
 	cout<<"O---------------------------<>-----------------------------O\n";
-	while(true)
-	{    	
+	while(true){    	
 		int choice;
 		cout<<"Enter Your Choice For Performing The Calculation->\n";
 		cin>>choice;
-		if(choice!=10 && choice>10 )
-		{
+		if(choice!=10 && choice>10 ){
 			cout<<"\t-->your Choice is Incorrect  \n";
 			cout<<endl<<"\t-->Enter Valid Choice:-\n";
 			break;
 		}
-		else
-		{   
+		else{   
 			int i,n;
 		    long double  a,b,c,d,e;	
 			float sum=0.0;   	
@@ -138,14 +126,13 @@ void BasicCalculations()//Calculation1
 		        		cin>>a;
 		        		cout<<"Enter second number = ";
 		        		cin>>b;
-		        		if(a==0||b==0)
-		        		{
+		        		if(a==0||b==0){
 		        			cout<<"Enterd number's or not add with 0 please ";exit(0);
 		        		}
-		        		else
-		        		{
+		        		else{
 		        			cout<<"Answer=\t"<<(a+b)<<endl;
-		        		}break;
+		        		}
+					break;
 					}
 		        case 2://Subtraction
 		        	{
@@ -154,23 +141,22 @@ void BasicCalculations()//Calculation1
 		        		cin>>a;
 		        		cout<<"Enter second number = ";
 		        		cin>>b;
-		        		if(a==0||b==0)
-		        		{
+		        		if(a==0||b==0){
 		        			cout<<"Erorr";exit(0);
 		        		}
-		        		else
-		        		{
+		        		else{
 		        			cout<<"Answer = "<<(a-b)<<endl;
-		        		}break;
+		        		} 
+					break;
 					}
 		        case 3://Division
 		        	{
 						cout<<"Enter The Dividend = ";cin>>a;
 		        	    cout<<"Enter the divisor = ";cin>>b;
-		        			if(b==0)
-		        			{
+		        			if(b==0){
 		        				cout<<"Erorr";exit(0);
 		        			}
+							
 		        			else{
 		        				cout<<"Answer = "<<(a/b)<<endl;
 		        			}
@@ -179,43 +165,36 @@ void BasicCalculations()//Calculation1
 		        case 4://Multiplication
 		        	{
 						cout<<"Enter first Number =";cin>>a;
-		        		if(a==0)
-		        		{
+		        		if(a==0){
 		        			cout<<"Erorr";exit(0);
 		        		}
-		        		else
-		        		{   cout<<"Enter second Number =";cin>>b;
-		        				if(b==0)
-		        				{
+		        		else{  
+						cout<<"Enter second Number =";cin>>b;
+		        				if(b==0){
 		        				cout<<"Erorr";exit(0);
 		        				}
-		        				else
-		        				{
+		        				else{
 		        					cout<<"Answer = "<<(a*b)<<endl;
 		        				}
-		        		}break;
+		        		} 
+					break;
 					}
 		        case 5://Average
 				    {
 		            	cout<<"Enter how many term's you want to find the Average = ";
 		            	cin>>n;
 						float arr[n],mean;
-		            	if(n==isalpha(n))
-		            	{
+		            	if(n==isalpha(n)){
 		            		cout<<"Error";exit(0);
 		            	}
-		            	else
-		            	{
-		            		for(int i=0; i<n; ++i)
-		            		{
+		            	else{
+		            		for(int i=0; i<n; ++i) {
 		            			cout<< i+1 << ". Enter number :  ";
 		            			cin >> arr[i];
-		            			if(arr[i]==0)
-		            			{
+		            			if(arr[i]==0){
 		            				cout<<"Error";exit(0);
 		            			}
-		            			else
-		            			{
+		            			else{
 		            				sum += arr[i];
 		            			}    
 		            		}
@@ -251,8 +230,7 @@ void BasicCalculations()//Calculation1
                         cout<<"Enter the numbers of element = ";
                         cin>>n;
 						float a[n];
-                        for(i=1;i<=n;i++)
-                        {
+                        for(i=1;i<=n;i++) {
                             cout<<"Enter "<<i<<" Element = ";
                             cin>>a[i];
                             sum+=a[i];
@@ -272,7 +250,7 @@ void BasicCalculations()//Calculation1
 		}
 	}
 }
-void AdvanceCalculations()//calculation2
+void AdvanceCalculations()//calculation2 
 {
 	system("cls");
 	//These are the choice's which user will select to perform the calculation's 
@@ -284,13 +262,12 @@ void AdvanceCalculations()//calculation2
 		int choice;
 		cout<<"Enter Your Choice For Performing The Calculation->\n";
 		cin>>choice;
-		if(choice!=10 && choice>10)
-		{
+		if(choice!=10 && choice>10){
 			cout<<"\t-->your Choice is Incorrect  \n"<<"\t-->Enter Valid Choice:-\n";
 			break;
 		}
-		else
-		{  
+			
+		else{  
 		    int i,j,n;
 		    float  a,b,c,d,e,f1,f2,h,f0,f;	   
 			float sum=0.0,mean,variance=0.0;	
@@ -300,21 +277,18 @@ void AdvanceCalculations()//calculation2
 				    {
 				    	cout<<"Enter the Rate = ";
 		            	cin>>a;
-		            	if(a==isalpha(a))
-		            	{
+		            	if(a==isalpha(a)){
 		            		cout<<"You Entred wrong character";exit(0);
 		            	}
 		            	cout<<"Enter the Principle Amount = ";cin>>b;
-		            	if(b==isalpha(b))
-		            	{
+		            	if(b==isalpha(b)){
 		            		cout<<"you enterd wrong choice";exit(0);
 		            	}
 		            	else
 		            	{
 		            		cout<<"Enter the time according to year = ";
 		            		cin>>c;
-		            		if(c==isalpha(c))
-		            		{
+		            		if(c==isalpha(c)){
 		            			cout<<"you enterd wrong choice";exit(0);
 		            		}
 		            		else{
@@ -350,10 +324,8 @@ void AdvanceCalculations()//calculation2
 				    		  cout<<"\nEnter "<<i<<" Value : ";
                               cin>>a[i];
                             }    
-                            for(i=1; i<=n-1; i++)
-                            {
-                              for(j=1; j<=n-1; j++)
-                              {
+                            for(i=1; i<=n-1; i++)  {
+                              for(j=1; j<=n-1; j++) {
                                 if(a[j]<=a[j+1]) {
                                   t=a[j]; a[j]=a[j+1]; a[j+1]=t;
                                 }
@@ -362,17 +334,14 @@ void AdvanceCalculations()//calculation2
                                 }
                              }
                             }
-                            if(n%2 == 0)
-                            { 
+                            if(n%2 == 0)  { 
                             	median=(a[n/2]+a[n/2+1])/2.0; 
                             }
                             
-                            else
-                            {
+                            else  {
                             	median=a[n/2+1]; 
                             }
-                            for(i=1; i<=n; i++) 
-                            { 
+                            for(i=1; i<=n; i++)   { 
                             	cout<<a[i];
                             	cout<<"\t";
                             }
@@ -385,8 +354,8 @@ void AdvanceCalculations()//calculation2
                         cout<<"Enter numbers of elements = ";
                         cin>>n;
                         float val[n];
-                        for(i=0;i<n;i++)
-                        { cout<<"Enter "<<i+1<<" Value:";
+                        for(i=0;i<n;i++) { 
+				cout<<"Enter "<<i+1<<" Value:";
                           cin>>val[i];
                         }
                         float  stdDeviation;
@@ -410,22 +379,17 @@ void AdvanceCalculations()//calculation2
 		            	cout<<"Enter how many term's you want to find the Mean = ";
 		            	cin>>n;
 						float arr[n];
-		            	if(n==isalpha(n))
-		            	{
+		            	if(n==isalpha(n)){
 		            		cout<<"Error";exit(0);
 		            	}
-		            	else
-		            	{
-		            		for(int i=0; i<n; ++i)
-		            		{
+		            	else{
+		            		for(int i=0; i<n; ++i){
 		            			cout << i+1 << ". Enter number :  ";
 		            			cin >> arr[i];
-		            			if(arr[i]==isalpha(arr[i]))
-		            			{
+		            			if(arr[i]==isalpha(arr[i])) {
 		            				cout<<"Error";exit(0);
 		            			}
-		            			else
-		            			{
+		            			else{
 		            				sum += arr[i];
 		            			}    
 		            		}
@@ -438,8 +402,9 @@ void AdvanceCalculations()//calculation2
 				    	cout<<"Enter numbers of elements = ";
                         cin>>n;
                         float val[n];
-                        for(i=0;i<n;i++)
-                        { cout<<"Enter "<<i+1<<" Value:";
+                        for(i=0;i<n;i++) { 
+				
+			cout<<"Enter "<<i+1<<" Value:";
                           cin>>val[i];
                         }
                         for(i = 0; i < n; ++i)
@@ -506,12 +471,10 @@ void Area()//Area
 	{
 	  cout<<"Enter your choice :-\n";
 	   cin>>ch;
-        if(ch>5)
-        {
+        if(ch>5)  {
 		      cout<<"Enter Correct Choice\n";
 		}
-        else
-        {
+        else {
             switch(ch)//Switch case for area operation's
             {           
                	case 1://Area of cirlce
@@ -568,8 +531,7 @@ void trignovalue()//Trigno
 	cout<<"O___________________________________________________________O\n\t\n";
     cout<<"Enter your choice:-\n";
 	cin>>ch;
-        if(ch>8)
-           {
+        if(ch>8) {
 			 cout<<"Enter Correct Choice\n";
 		      login();//Calling the main function
 		   }
@@ -659,19 +621,17 @@ void login()//login
     ifstream input("C:/DATABASE_Calculator/Information.txt");/*Creating a text file in c drive Folder name(DataBase_Calculator) , File name(Information.txt)*/
     while(input>>u>>p)
     {      
-        if(u==user && p==pass)
-        {
+        if(u==user && p==pass) {
             count=1;
             system("cls");
         }  
     }
     input.close();//closing the file
-    if(count==1)//if count is one this condition becomes true and run the block of code 
-    {
+    if(count==1) {
+	    //if count is one this condition becomes true and run the block of code 
 		access();
 	}    
-    else 
-    {    //condition false login   
+    else  {    //condition false login   
     	cout<<"\nLOGIN ERROR\nPlease check your username and password\n";
     	main();
     }
@@ -714,14 +674,12 @@ void forgot()
                         ifstream searchu("C:/DATABASE_Calculator/Information.txt");
                         while(searchu>>su>>sp)
                         {
-                                if(su==searchuser)
-                                {
+                                if(su==searchuser) {
                                         count=1;
                                 }
                         }
                         searchu.close();
-                        if(count==1)
-                        {
+                        if(count==1)  {
                                 cout<<"\n\nHurray, account found\n";
                                 cout<<"\nYour password is "<<sp;
                                 cin.get();
@@ -729,8 +687,7 @@ void forgot()
                                 system("cls");
                                 main();
                         }
-                        else
-                        {
+                        else {
                                 cout<<"\nSorry, Your userID is not found in our database\n";
                                 cout<<"\nPlease kindly contact your system administrator for more details \n";
                                 cin.get();
@@ -755,8 +712,7 @@ void forgot()
                                 }       
                         }
                         searchp.close();
-                        if(count==1)
-                        {
+                        if(count==1) {
                                 cout<<"\nYour password is found in the database \n";
                                 cout<<"\nYour Id is : "<<su2;
                                 cin.get();
@@ -764,8 +720,7 @@ void forgot()
                                 system("cls");
                                 main();
                         }
-                        else
-                        {
+                        else {
                                 cout<<"Sorry, We cannot found your password in our database \n";
                                 cout<<"\nkindly contact your administrator for more information\n";
                                 cin.get();
