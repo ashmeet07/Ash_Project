@@ -126,7 +126,7 @@ void BasicCalculations()//Calculation1
 		        		cin>>a;
 		        		cout<<"Enter second number = ";
 		        		cin>>b;
-		        		if(a==0||b==0){
+		        		if(a==0||b==0) {
 		        			cout<<"Enterd number's or not add with 0 please ";exit(0);
 		        		}
 		        		else{
@@ -142,7 +142,7 @@ void BasicCalculations()//Calculation1
 		        		cout<<"Enter second number = ";
 		        		cin>>b;
 		        		if(a==0||b==0){
-		        			cout<<"Erorr";exit(0);
+		        			cout<<"Erorr" ; exit(0);
 		        		}
 		        		else{
 		        			cout<<"Answer = "<<(a-b)<<endl;
@@ -284,17 +284,19 @@ void AdvanceCalculations()//calculation2
 		            	if(b==isalpha(b)){
 		            		cout<<"you enterd wrong choice";exit(0);
 		            	}
+					
 		            	else
 		            	{
 		            		cout<<"Enter the time according to year = ";
 		            		cin>>c;
-		            		if(c==isalpha(c)){
+		            		if(c==isalpha(c)) {
 		            			cout<<"you enterd wrong choice";exit(0);
 		            		}
 		            		else{
 		            			SimpleInterest(a,b,c);
 		            		}	
-		            	}break;
+		            	} 
+					    break;
 				    }  
 		        case 2://Mode
 				    {
@@ -664,8 +666,7 @@ void forgot()
         cin>>ch;
         switch(ch)
         {
-                case 1:
-                {
+                case 1: {
                         int count=0;
                         string searchuser,su,sp;
                         cout<<"\nEnter your remembered username :";
@@ -696,8 +697,7 @@ void forgot()
                         }
                         break;
                 }
-                case 2:
-                {
+                case 2: {
                         int count=0;
                         string searchpass,su2,sp2;
                         cout<<"\nEnter the remembered password :";
@@ -731,8 +731,7 @@ void forgot()
                         break;
                 }
                 
-                case 3:
-                {
+                case 3: {
                         cin.get();
                         main();
                 }
